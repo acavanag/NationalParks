@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lat: 
+  lon: 
+  image: MyString
+  user_id: MyString
+  user_name: MyString
+  park: MyString
+  ip_address: MyString
+
+two:
+  lat: 
+  lon: 
+  image: MyString
+  user_id: MyString
+  user_name: MyString
+  park: MyString
+  ip_address: MyString

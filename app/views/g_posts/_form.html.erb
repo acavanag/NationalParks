@@ -1,0 +1,45 @@
+<%= form_for(@g_post) do |f| %>
+  <% if @g_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@g_post.errors.count, "error") %> prohibited this g_post from being saved:</h2>
+
+      <ul>
+      <% @g_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :park %><br>
+    <%= f.text_field :park %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_address %><br>
+    <%= f.text_field :ip_address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @g_post.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @g_post.lon %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @g_post.image %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @g_post.user_id %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @g_post.user_name %>
+</p>
+
+<p>
+  <strong>Park:</strong>
+  <%= @g_post.park %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @g_post.ip_address %>
+</p>
+
+<%= link_to 'Edit', edit_g_post_path(@g_post) %> |
+<%= link_to 'Back', g_posts_path %>
