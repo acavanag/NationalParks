@@ -12,7 +12,6 @@ class GPostsController < ApplicationController
   # GET /g_posts/1
   # GET /g_posts/1.json
   def show
-    set_g_post
     render :json => @g_post.to_json
   end
 
