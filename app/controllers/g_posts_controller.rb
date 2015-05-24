@@ -28,6 +28,7 @@ class GPostsController < ApplicationController
   # POST /g_posts.json
   def create
     @g_post = GPost.new(g_post_params)
+    @g_post.ip_address = request.remote_ip
 
     respond_to do |format|
       if @g_post.save
@@ -72,6 +73,6 @@ class GPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def g_post_params
-      params.require(:g_post).permit(:lat, :lon, :image, :user_id, :user_name, :park, :ip_address)
+      params.require(:g_post).permit(:lat, :lon, :image, :user_id, :user_name, :park)
     end
 end
