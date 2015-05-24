@@ -4,14 +4,16 @@ class GPostsController < ApplicationController
   # GET /g_posts
   # GET /g_posts.json
   def index
-    @g_posts = GPost.all
+    #@g_posts = GPost.all
+    @g_posts = GPost.page(params[:page]).per(25)
     render :json => @g_posts.to_json
   end
 
   # GET /g_posts/1
   # GET /g_posts/1.json
   def show
-    render :json
+    @g_post = find(param[:id])
+    render :json => @g_posts.to_json
   end
 
   # GET /g_posts/new
